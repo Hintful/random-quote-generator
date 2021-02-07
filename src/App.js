@@ -15,12 +15,23 @@ class QuoteBox extends React.Component {
       index: 0
     };
     this.getNewQuote = this.getNewQuote.bind(this);
+    this.getInitialQuote = this.getInitialQuote.bind(this);
     // this.state.quotes.append({"quote":"what", "author":"me"});
-  fetch("https://gist.githubusercontent.com/nasrulhazim/54b659e43b1035215cd0ba1d4577ee80/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json").then(res => res.json()).then((out) => {
-  for(let i = 0; i < out["quotes"].length; i++) {
-    this.state.quotes.push(out["quotes"][i]);
+    fetch("https://gist.githubusercontent.com/nasrulhazim/54b659e43b1035215cd0ba1d4577ee80/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json").then(res => res.json()).then((out) => {
+      for(let i = 0; i < out["quotes"].length; i++) {
+        this.state.quotes.push(out["quotes"][i]);
+      }
+    });
   }
-});
+  componentDidMount() {
+    this.getInitialQuote();
+  }
+  getInitialQuote() {
+    setTimeout(() => {
+      this.setState(state => (
+        {index: Math.floor(Math.random() * state.quotes.length)}
+      ));
+    }, 1000);
   }
   getNewQuote() {
     setTimeout(() => {
@@ -54,8 +65,9 @@ class QuoteBox extends React.Component {
       flex: 1,
       marginBottom: 10 
     }
+
     const quote = this.state.quotes[this.state.index];
-    const twitterIntent = "https://twitter.com/intent/tweet?text=" + quote["quote"] + "&via=quoteMachine";
+    const twitterIntent = "https://twitter.com/intent/tweet?text=" + "\"" + quote["quote"] + "\" - " + quote["author"] + " via&url=https://kurtchoi.dev/random-quote-generator";
     return (
       
       <div id="quote-box" style={quoteBoxStyle}>
@@ -78,6 +90,10 @@ class QuoteBox extends React.Component {
   }
 }
 $(document).ready(function() {
+  setTimeout(function() {
+    $("*").animate({opacity: '1'}, 2000);
+  }, 1000); // wait 1s, then show initial quote
+  
   $("#new-quote").click(function() {
     $("#quote").animate({opacity: '0'}, 1000);
     $("#quote").animate({opacity: '1'}, 1000);

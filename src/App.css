@@ -35,6 +35,9 @@ body {
 #quotation {
   font-size: 12px;
 }
+#quote {
+  opacity: 0;
+}
 #new-quote {
   display: flex;
   flex-direction: column;
@@ -77,4 +80,8 @@ body {
   100% {
     opacity: 1;
   }
+}
+
+* {
+  opacity: 0;
 }

@@ -4,6 +4,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 
+## Try Live
+
+Feel free to try the live version of this project on my website at [https://kurtchoi.dev/random-quote-generator](https://kurtchoi.dev/random-quote-generator).
+
+
+
 ## Description
 
 It is a simple application that generates random quotes. A [.JSON file containing various quotes](https://gist.githubusercontent.com/nasrulhazim/54b659e43b1035215cd0ba1d4577ee80/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json) is fetched via [fetch()](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) API, and then parsed to be stored in React component `state`. 

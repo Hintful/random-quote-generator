@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/random-quote-generator/static/css/main.e93f846a.chunk.css",
-    "main.js": "/random-quote-generator/static/js/main.a01d63fa.chunk.js",
-    "main.js.map": "/random-quote-generator/static/js/main.a01d63fa.chunk.js.map",
-    "runtime-main.js": "/random-quote-generator/static/js/runtime-main.ef0d2c77.js",
-    "runtime-main.js.map": "/random-quote-generator/static/js/runtime-main.ef0d2c77.js.map",
-    "static/js/2.fd6519b9.chunk.js": "/random-quote-generator/static/js/2.fd6519b9.chunk.js",
-    "static/js/2.fd6519b9.chunk.js.map": "/random-quote-generator/static/js/2.fd6519b9.chunk.js.map",
-    "static/js/3.3ed0623b.chunk.js": "/random-quote-generator/static/js/3.3ed0623b.chunk.js",
-    "static/js/3.3ed0623b.chunk.js.map": "/random-quote-generator/static/js/3.3ed0623b.chunk.js.map",
+    "main.js": "/random-quote-generator/static/js/main.8d3c5357.chunk.js",
+    "main.js.map": "/random-quote-generator/static/js/main.8d3c5357.chunk.js.map",
+    "runtime-main.js": "/random-quote-generator/static/js/runtime-main.6adcc256.js",
+    "runtime-main.js.map": "/random-quote-generator/static/js/runtime-main.6adcc256.js.map",
+    "static/js/2.90d87afe.chunk.js": "/random-quote-generator/static/js/2.90d87afe.chunk.js",
+    "static/js/2.90d87afe.chunk.js.map": "/random-quote-generator/static/js/2.90d87afe.chunk.js.map",
+    "static/js/3.7a74d368.chunk.js": "/random-quote-generator/static/js/3.7a74d368.chunk.js",
+    "static/js/3.7a74d368.chunk.js.map": "/random-quote-generator/static/js/3.7a74d368.chunk.js.map",
     "index.html": "/random-quote-generator/index.html",
     "static/css/main.e93f846a.chunk.css.map": "/random-quote-generator/static/css/main.e93f846a.chunk.css.map",
-    "static/js/2.fd6519b9.chunk.js.LICENSE.txt": "/random-quote-generator/static/js/2.fd6519b9.chunk.js.LICENSE.txt",
+    "static/js/2.90d87afe.chunk.js.LICENSE.txt": "/random-quote-generator/static/js/2.90d87afe.chunk.js.LICENSE.txt",
     "static/media/logo.6ce24c58.svg": "/random-quote-generator/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.ef0d2c77.js",
-    "static/js/2.fd6519b9.chunk.js",
+    "static/js/runtime-main.6adcc256.js",
+    "static/js/2.90d87afe.chunk.js",
     "static/css/main.e93f846a.chunk.css",
-    "static/js/main.a01d63fa.chunk.js"
+    "static/js/main.8d3c5357.chunk.js"
   ]
 }

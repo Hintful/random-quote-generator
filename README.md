@@ -10,6 +10,8 @@ It is a simple application that generates random quotes. A [.JSON file containin
 
 CSS stylization has been attempted with both normal .css file styling and React in-line styling for personal learning purposes.
 
+jQuery has been used for quote change animation.
+
 
 
 ## How to run

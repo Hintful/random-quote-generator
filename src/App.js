@@ -3,7 +3,9 @@ import './App.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
-// window.$ = $;
+import { Helmet } from 'react-helmet';
+
+const TITLE = 'Random Quote Generator';
 
 class QuoteBox extends React.Component {
   constructor(props) {
@@ -90,7 +92,10 @@ $(document).ready(function() {
 function App() {
   return (
     <div className="App">
-        <QuoteBox />
+      <Helmet>
+        <title>Random Quote Generator</title>
+      </Helmet>
+      <QuoteBox />
     </div>
   );
 }

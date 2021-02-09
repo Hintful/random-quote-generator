@@ -1,16 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat:wght@500&display=swap");
 @import url("https://use.fontawesome.com/d0c316cf02.js");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css");
 body {
   margin: 0;
 }
-.App {
+
+.main {
   display: flex;
   flex-direction: column;
+  width: 100%;
   height: 100vh;
-  width: 100vw;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   background-color: skyblue;
 }
 .quote-box {
@@ -70,6 +71,8 @@ body {
   transition: all 2s ease;
 }
 
+
+
 @keyframes fade-out-in {
   0% {
     opacity: 1;
@@ -82,6 +85,20 @@ body {
   }
 }
 
+.credit {
+  margin-top: 20px;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 10px;
+  color: white;
+}
+
+a:link, a:visited {
+  color: white;
+}
+
+
 * {
   opacity: 0;
 }
+

@@ -69,24 +69,27 @@ class QuoteBox extends React.Component {
     const quote = this.state.quotes[this.state.index];
     const twitterIntent = "https://twitter.com/intent/tweet?text=" + "\"" + quote["quote"] + "\" - " + quote["author"] + " via&url=https://kurtchoi.dev/random-quote-generator";
     return (
-      
-      <div id="quote-box" style={quoteBoxStyle}>
-        <div id="quote" style={quoteStyle}>
-          <h2 id="text"><sup><i id="quotation" class="fas fa-quote-left"></i></sup>{quote["quote"]}<sup><i id="quotation" class="fas fa-quote-right"></i></sup></h2>
-          <p id="author">- {quote["author"]}</p>
-        </div>
-        <div style={buttonRowStyle}>
-          <a href={twitterIntent} id="tweet-quote">
-            <div class="tweet">
-              <i class="fab fa-twitter"></i>
-            </div>
-          </a>
-          <div id="new-quote" onClick={this.getNewQuote}><i class="fas fa-sync"></i>
+      <div class="main">
+        <div id="quote-box" style={quoteBoxStyle}>
+          <div id="quote" style={quoteStyle}>
+            <h2 id="text"><sup><i id="quotation" class="fas fa-quote-left"></i></sup>{quote["quote"]}<sup><i id="quotation" class="fas fa-quote-right"></i></sup></h2>
+            <p id="author">- {quote["author"]}</p>
           </div>
-          { /* <button id="new-quote" onClick={this.getNewQuote}><i class="fas fa-sync"></i></button> */ }
+          <div style={buttonRowStyle}>
+            <a href={twitterIntent} id="tweet-quote">
+              <div class="tweet">
+                <i class="fab fa-twitter"></i>
+              </div>
+            </a>
+            <div id="new-quote" onClick={this.getNewQuote}><i class="fas fa-sync"></i>
+            </div>
+          </div>
+        </div>
+        <div class="credit">
+          Coded and designed by <a href="https://kurtchoi.dev" target="_blank">Kurt Choi</a>
         </div>
       </div>
-    )
+    );
   }
 }
 $(document).ready(function() {

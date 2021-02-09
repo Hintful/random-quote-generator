@@ -8,6 +8,8 @@ import ReactGA from 'react-ga';
 
 const TITLE = 'Random Quote Generator';
 
+ReactGA.initialize("G-D3Z7LQS3WW");
+
 class QuoteBox extends React.Component {
   constructor(props) {
     super(props);
@@ -25,6 +27,7 @@ class QuoteBox extends React.Component {
     });
   }
   componentDidMount() {
+    ReactGA.pageview(window.location.pathname + window.location.search);
     this.getInitialQuote();
   }
   getInitialQuote() {
@@ -108,21 +111,7 @@ $(document).ready(function() {
   });
 });
 
-
-// const element = <QuoteBox />;
-
-// ReactDOM.render(element, document.getElementById('root'));
-
 function App() {
-  useEffect(() => {
-    ReactGA.initialize('G-D3Z7LQS3WW', {
-      gaOptions: {
-        siteSpeedSampleRate: 100
-      }
-    });
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  })
-
   return (
     <div className="App">
       <Helmet>

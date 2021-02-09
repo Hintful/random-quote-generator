@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import React from 'react';
+import React, {useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import { Helmet } from 'react-helmet';
@@ -25,12 +25,6 @@ class QuoteBox extends React.Component {
     });
   }
   componentDidMount() {
-    ReactGA.initialize('G-D3Z7LQS3WW', {
-      gaOptions: {
-        siteSpeedSampleRate: 100
-      }
-    });
-    ReactGA.pageview(window.location.pathname + window.location.search);
     this.getInitialQuote();
   }
   getInitialQuote() {
@@ -120,6 +114,15 @@ $(document).ready(function() {
 // ReactDOM.render(element, document.getElementById('root'));
 
 function App() {
+  useEffect(() => {
+    ReactGA.initialize('G-D3Z7LQS3WW', {
+      gaOptions: {
+        siteSpeedSampleRate: 100
+      }
+    });
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  })
+
   return (
     <div className="App">
       <Helmet>

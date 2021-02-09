@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import { Helmet } from 'react-helmet';
+import ReactGA from 'react-ga';
 
 const TITLE = 'Random Quote Generator';
 
@@ -24,6 +25,12 @@ class QuoteBox extends React.Component {
     });
   }
   componentDidMount() {
+    ReactGA.initialize('G-D3Z7LQS3WW', {
+      gaOptions: {
+        siteSpeedSampleRate: 100
+      }
+    });
+    ReactGA.pageview(window.location.pathname + window.location.search);
     this.getInitialQuote();
   }
   getInitialQuote() {
@@ -39,6 +46,10 @@ class QuoteBox extends React.Component {
         {index: Math.floor(Math.random() * state.quotes.length)}
       ));
     }, 1000);
+    ReactGA.event({
+      category: 'Random-Quote User',
+      action: 'Generated new quote'
+    });
   }
   render() {
     const quoteBoxStyle = {

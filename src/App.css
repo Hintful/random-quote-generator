@@ -86,15 +86,17 @@ body {
 }
 
 .credit {
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
   font-family: Montserrat;
   font-size: 10px;
   color: white;
-}
 
-a:link, a:visited {
-  color: white;
+  /* make text unselectable */
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 }
 
 

@@ -8,7 +8,16 @@ import ReactGA from 'react-ga';
 
 const TITLE = 'Random Quote Generator';
 
-ReactGA.initialize("G-D3Z7LQS3WW");
+function usePageViews() {
+  useEffect(() => {
+    if(!window.GA_INIT) {
+      ReactGA.initialize("UA-186165133-1");
+      window.GA_INIT = true;
+    }
+    ReactGA.set({ page: window.location.pathname });
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+}
 
 class QuoteBox extends React.Component {
   constructor(props) {
@@ -27,7 +36,6 @@ class QuoteBox extends React.Component {
     });
   }
   componentDidMount() {
-    ReactGA.pageview(window.location.pathname + window.location.search);
     this.getInitialQuote();
   }
   getInitialQuote() {
@@ -44,7 +52,7 @@ class QuoteBox extends React.Component {
       ));
     }, 1000);
     ReactGA.event({
-      category: 'Random-Quote User',
+      category: 'Random Quote Generator',
       action: 'Generated new quote'
     });
   }
@@ -112,6 +120,8 @@ $(document).ready(function() {
 });
 
 function App() {
+  usePageViews();
+
   return (
     <div className="App">
       <Helmet>
